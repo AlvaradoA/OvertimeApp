@@ -23,3 +23,5 @@
   - Dotenv -> protect credentials
   - Rspec -> testing
   - Capybara -> integration testing
+
+## TODOS:
