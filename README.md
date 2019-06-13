@@ -6,7 +6,7 @@
 ## Models
   - Post -> date:date rationale:text
   - x User -> Devise
-  - AdminUser -> STI
+  - x AdminUser -> STI
 
 ## Features:
   - Approval workflow - when post is created admin may approve it
