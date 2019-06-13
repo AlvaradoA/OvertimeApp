@@ -4,7 +4,7 @@
 
 
 ## Models
-  - Post -> date:date rationale:text
+  - x Post -> date:date rationale:text
   - x User -> Devise
   - x AdminUser -> STI
 
@@ -16,12 +16,12 @@
   - Need documentation for no overtime
 
 ## Libraries:
-  - Devise -> user authentication
+  x Devise -> user authentication
   - Administrate -> manage admin dashboard
-  - Bootstrap -> styling/ formatting
+  x Bootstrap -> styling/ formatting
   - Twilio -> sms message sending
   - Dotenv -> protect credentials
-  - Rspec -> testing
-  - Capybara -> integration testing
+  x Rspec -> testing
+  x Capybara -> integration testing
 
 ## TODOS:
