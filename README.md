@@ -17,7 +17,7 @@
 
 ## Libraries:
   - x Devise -> user authentication
-  - Administrate -> manage admin dashboard
+  - x Administrate -> manage admin dashboard
   - x Bootstrap -> styling/ formatting
   - Twilio -> sms message sending
   - Dotenv -> protect credentials
