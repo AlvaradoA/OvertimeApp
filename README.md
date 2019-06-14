@@ -23,5 +23,6 @@
   - Dotenv -> protect credentials
   x Rspec -> testing
   x Capybara -> integration testing
+  x FactoryGirl -> teseting
 
 ## TODOS:
