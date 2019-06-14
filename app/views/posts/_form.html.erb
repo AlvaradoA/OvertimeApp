@@ -1,6 +1,13 @@
 <div class="row">
   <div class="col-md-12">
   <%= form_for(@post, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+    <% if @post.errors.any? %>
+      <% @post.errors.full_messages.each do |error| %>
+        <%= js add_gritter(error, title: "Overtime App Notification", sticky: false) %>
+      <% end %>
+    <% end %>
+
     <div class="form-group">
       <div class="control-label col-md-2">
         <%= f.label :date, "Date" %>
