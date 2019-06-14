@@ -27,4 +27,3 @@
 
 ## TODOS:
   - Title partial
-  - Block non admin and guest users for admin dashboard
