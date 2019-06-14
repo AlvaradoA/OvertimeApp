@@ -16,13 +16,13 @@
   - Need documentation for no overtime
 
 ## Libraries:
-  x Devise -> user authentication
+  - x Devise -> user authentication
   - Administrate -> manage admin dashboard
-  x Bootstrap -> styling/ formatting
+  - x Bootstrap -> styling/ formatting
   - Twilio -> sms message sending
   - Dotenv -> protect credentials
-  x Rspec -> testing
-  x Capybara -> integration testing
-  x FactoryGirl -> teseting
+  - x Rspec -> testing
+  - x Capybara -> integration testing
+  - x FactoryGirl -> teseting
 
 ## TODOS:
