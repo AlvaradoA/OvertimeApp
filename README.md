@@ -26,3 +26,4 @@
   - x FactoryGirl -> teseting
 
 ## TODOS:
+  - Title partial
