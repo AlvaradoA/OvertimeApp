@@ -80,4 +80,15 @@ describe 'navigate' do
       expect(User.last.posts.last.rationale).to eq("Edited Content")
     end
   end
+
+  describe "delete" do
+    before do
+      @post = FactoryGirl.create(:post)
+    end
+
+    it 'can be deleted' do
+      visit posts_path
+      click_link("delete_post_from_index_#{@post.id}")
+    end
+  end
 end
