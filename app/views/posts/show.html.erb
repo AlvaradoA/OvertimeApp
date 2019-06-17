@@ -47,5 +47,5 @@
   </div>
 
   <%= link_to "Edit", edit_post_path(@post), class: "btn-lg btn-warning", id: "edit_#{@post.id}" if policy(@post).update? %>
-
+  <%= link_to "List of Time Entries", posts_path, class: "btn-lg btn-primary" %>
 </div>
