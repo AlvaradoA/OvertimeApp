@@ -10,8 +10,13 @@ describe 'navigate' do
       visit posts_path
     end
     it 'can be reached successfully' do
+      expect(current_path).to eq(posts_path)
+    end
 
-      expect(page.status_code).to eq(200)
+    it 'cannot be reached by guests' do
+      logout(:user)
+      visit posts_path
+      expect(current_path).to eq(new_user_session_path)
     end
 
     it 'has a title of Posts' do
@@ -19,14 +24,14 @@ describe 'navigate' do
     end
 
     it 'has a list of posts' do
-      post1 = FactoryGirl.build_stubbed(:post)
-      post2 = FactoryGirl.build_stubbed(:second_post)
+      FactoryGirl.build_stubbed(:post)
+      FactoryGirl.build_stubbed(:second_post)
       visit posts_path
       expect(page).to have_content(/Rationale|content/)
     end
 
     it 'only shows posts created by oneself' do
-      post = FactoryGirl.create(:post)
+      FactoryGirl.create(:post)
       other_post = FactoryGirl.create(:post_from_other_user)
       other_user = User.find(other_post.user_id)
 
