@@ -27,3 +27,4 @@
 
 ## TODOS:
   - Title partial
+  - comments in posts_controller

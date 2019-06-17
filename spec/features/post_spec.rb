@@ -24,6 +24,17 @@ describe 'navigate' do
       visit posts_path
       expect(page).to have_content(/Rationale|content/)
     end
+
+    it 'only shows posts created by oneself' do
+      post = FactoryGirl.create(:post)
+      other_post = FactoryGirl.create(:post_from_other_user)
+      other_user = User.find(other_post.user_id)
+
+      login_as(other_user, :scope => :user)
+
+      visit posts_path
+      expect(page).to have_content(/Unseen/)
+    end
   end
 
   describe 'new' do
@@ -63,9 +74,8 @@ describe 'navigate' do
   describe "edit" do
     before do
       @post = FactoryGirl.create(:post)
-      @edit_user = User.create(first_name: "asdf", last_name: "asdf", password: "pwords", password_confirmation: "pwords", email: "email@email.com")
+      @edit_user = User.find(@post.user_id)
       login_as(@edit_user, :scope => :user)
-      @post = Post.create(date: Date.today, rationale: "asdfgasd", user_id: @edit_user.id)
     end
     it 'can be edited' do
       visit edit_post_path(@post)
@@ -91,6 +101,8 @@ describe 'navigate' do
   describe "delete" do
     before do
       @post = FactoryGirl.create(:post)
+      user = User.find(@post.user_id)
+      login_as(user, :scope => :user)
     end
 
     it 'can be deleted' do
