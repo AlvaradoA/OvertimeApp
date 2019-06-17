@@ -12,7 +12,7 @@
     <%= post.overtime_request %>
   </td>
   <td>
-    <%= truncate(post.rationale) %>
+    <%= link_to truncate(post.rationale), post %>
   </td>
   <td>
     <%= status_label post.status %>

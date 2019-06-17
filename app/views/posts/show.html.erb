@@ -1,1 +1,51 @@
-<%= @post.inspect %>
+<div class="col-md-12">
+  <div class="well">
+    <div class="row">
+      <div class="col-md-2">
+        <h4>Employee:</h4>
+      </div>
+      <div class="col-md-10">
+        <h5><%= @post.user.full_name %></h5>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-2">
+        <h4>Date:</h4>
+      </div>
+      <div class="col-md-10">
+        <h5><%= @post.date %></h5>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-2">
+        <h4>Overtime Requested:</h4>
+      </div>
+      <div class="col-md-10">
+        <h5><%= @post.overtime_request %></h5>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-2">
+        <h4>Rationale:</h4>
+      </div>
+      <div class="col-md-10">
+        <h5><%= @post.rationale %></h5>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-2">
+        <h4>Status:</h4>
+      </div>
+      <div class="col-md-10">
+        <h5><%= @post.status %></h5>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to "Edit", edit_post_path(@post), class: "btn-lg btn-warning", id: "edit_#{@post.id}" if policy(@post).update? %>
+
+</div>
