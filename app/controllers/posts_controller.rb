@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     #if current_user.type == "AdminUser"
     #  @posts = Post.all
     #else
-      @posts = current_user.posts
+      @posts = Post.posts_by current_user
     #end
   end
 
