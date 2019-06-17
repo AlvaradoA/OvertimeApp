@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before do
-    @user = FactoryGirl.build_stubbed(:user)
+    @user = FactoryGirl.create(:user)
   end
   describe "creation" do
 
