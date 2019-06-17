@@ -19,6 +19,15 @@
 
     <div class="form-group">
       <div class="control-label col-md-2">
+        <%= f.label :overtime_request, "Overtime Request" %>
+      </div>
+      <div class="col-md-8">
+        <%= f.text_field :overtime_request, rows: 10, class: "form-control", placeholder: "Enter your rationale", autofocus: true %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="control-label col-md-2">
         <%= f.label :rationale, "Rationale" %>
       </div>
       <div class="col-md-8">
