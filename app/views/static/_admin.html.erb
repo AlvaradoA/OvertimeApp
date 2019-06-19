@@ -2,15 +2,9 @@
   <div class="well">
     <div class="row">
       <div class="col-md-11 col-md-offset-1">
-      <div class="col-md-3 home-block">
-        this
-      </div>
-      <div class="col-md-3 col-md-offset-1 home-block">
-        this
-      </div>
-      <div class="col-md-3 col-md-offset-1 home-block">
-        this
-      </div>
+        <h3>Pending Approvals</h3>
+        <hr />
+        <%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>
       </div>
     </div>
   </div>
