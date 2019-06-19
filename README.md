@@ -19,8 +19,8 @@
   - x Devise -> user authentication
   - x Administrate -> manage admin dashboard
   - x Bootstrap -> styling/ formatting
-  - Twilio -> sms message sending
-  - Dotenv -> protect credentials
+  - x Twilio -> sms message sending
+  - x Dotenv -> protect credentials
   - x Rspec -> testing
   - x Capybara -> integration testing
   - x FactoryGirl -> teseting
