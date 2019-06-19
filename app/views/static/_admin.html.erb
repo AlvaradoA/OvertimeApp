@@ -7,8 +7,24 @@
         <%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>
       </div>
     </div>
+    <div class="row">
+      <center>
+        <%= link_to "View all Entries", posts_path, class: "btn btn-primary" %>
+      </center>
+    </div>
   </div>
   <div class="well">
-
+    <div class="row">
+      <div class="col-md-11 col-md-offset-1">
+        <h3>Confirmation Log</h3>
+        <hr />
+        <%= render partial: 'confirmation_log', locals: { recent_audit_items: @recent_audit_items } %>
+      </div>
+    </div>
+    <div class="row">
+      <center>
+        <%= link_to "View all Logs", audit_logs_path, class: "btn btn-primary" %>
+      </center>
+    </div>
   </div>
 </div>

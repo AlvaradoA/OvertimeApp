@@ -1,0 +1,8 @@
+<% recent_audit_items.each do |recent_audit_item| %>
+  <div class="col-md-3 col-md-offset-1 home-block">
+    <h5><b><%= recent_audit_item.user.full_name %></b></h5>
+    <h6><b>Week Starting:</b> <%= recent_audit_item.start_date %></h6>
+    <h6><b>Confirmed at:</b> <%= recent_audit_item.end_date || status_label(recent_audit_item.status) %></h6>
+    <h6><b>Status:</b> <%= status_label recent_audit_item.status %></h6>
+  </div>
+<% end %>
