@@ -24,7 +24,7 @@
   - x Rspec -> testing
   - x Capybara -> integration testing
   - x FactoryGirl -> teseting
+  - x Kaminari -> pagination
 
 ## TODOS:
   - Title partial
-  - comments in posts_controller
