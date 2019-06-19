@@ -1,7 +1,16 @@
 class PostPolicy < ApplicationPolicy
+
   def update?
     return true if post_approved? && admin?
     return true if creator_or_admin && !post_approved?
+  end
+
+  def approve?
+    admin?
+  end
+
+  def reject?
+    admin?
   end
 
   private
