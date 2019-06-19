@@ -3,6 +3,7 @@ class AuditLog < ApplicationRecord
   belongs_to :user
   validates_presence_of :user_id, :status, :start_date
   after_initialize :set_defaults
+  paginates_per 10
 
   private
 
