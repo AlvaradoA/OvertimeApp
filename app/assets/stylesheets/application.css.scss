@@ -16,3 +16,16 @@
   text-decoration: none;
   color: black;
 }
+
+.home-block {
+  margin: 20px;
+  background-color: #ededed;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.home-block:hover {
+  background-color: #dddddd;
+}
