@@ -27,4 +27,14 @@ describe 'Homepage' do
     visit reject_post_path(@post)
     expect(@post.reload.status).to_not eq('rejected')
   end
+
+  it 'allows the employee to change the audit log status from the homepage' do
+    audit_log = FactoryGirl.create(:audit_log)
+    login_as(audit_log.user, :scope => :user)
+    visit root_path
+
+    click_on("confirm_#{audit_log.id}")
+
+    expect(audit_log.reload.status).to eq('confirmed')
+  end
 end
