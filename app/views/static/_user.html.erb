@@ -1,30 +1,27 @@
 <div class="jumbotron container-fluid">
-  <div class="well">
-    <div class="row">
-      <div class="col-md-11 col-md-offset-1">
-        <h3>Pending Approvals</h3>
-        <hr />
-        CONTENT HERE
+  <% if @pending_audit_confirmations.count > 0 %>
+    <div class="well">
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <h3>Pending Your Confirmation</h3>
+          <hr />
+          <%= render partial: 'pending_audit_confirmation', locals: { pending_audit_confirmations: @pending_audit_confirmations } %>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <center>
+      <div class="row">
+        <center>
 
-      </center>
+        </center>
+      </div>
     </div>
-  </div>
+  <% end %>
   <div class="well">
     <div class="row">
       <div class="col-md-11 col-md-offset-1">
-        <h3>Pending Your Confirmation</h3>
+        <h3>Request Overtime</h3>
         <hr />
-        <%= render partial: 'pending_audit_confirmation', locals: { pending_audit_confirmations: @pending_audit_confirmations } %>
+        <%= link_to "Request Overtime Approval", new_post_path, class: "btn btn-primary btn-lg btn-block" %>
       </div>
-    </div>
-    <div class="row">
-      <center>
-        
-      </center>
     </div>
   </div>
 </div>

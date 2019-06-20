@@ -12,8 +12,8 @@ end
 
 puts "100 Posts have been created"
 
-100.times do |audit_log|
+10.times do |audit_log|
   AuditLog.create(user_id: User.last.id)
 end
 
-puts "100 Audit Logs have been created"
+puts "10 Audit Logs have been created"
