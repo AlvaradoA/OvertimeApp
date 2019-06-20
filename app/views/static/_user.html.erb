@@ -1,11 +1,30 @@
-<div class="jumbotron">
-  <h2>
-    Hi User
-  </h2>
-  <p>
-    This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-  </p>
-  <p>
-    <a class="btn btn-primary btn-large" href="#">Learn more</a>
-  </p>
+<div class="jumbotron container-fluid">
+  <div class="well">
+    <div class="row">
+      <div class="col-md-11 col-md-offset-1">
+        <h3>Pending Approvals</h3>
+        <hr />
+        CONTENT HERE
+      </div>
+    </div>
+    <div class="row">
+      <center>
+
+      </center>
+    </div>
+  </div>
+  <div class="well">
+    <div class="row">
+      <div class="col-md-11 col-md-offset-1">
+        <h3>Pending Your Confirmation</h3>
+        <hr />
+        <%= render partial: 'pending_audit_confirmation', locals: { pending_audit_confirmations: @pending_audit_confirmations } %>
+      </div>
+    </div>
+    <div class="row">
+      <center>
+        
+      </center>
+    </div>
+  </div>
 </div>

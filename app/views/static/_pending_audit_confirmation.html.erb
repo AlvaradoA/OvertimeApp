@@ -1,0 +1,14 @@
+<% pending_audit_confirmations.each do |pending_audit_confirmation| %>
+  <div class="col-md-5 col-md-offset-1 home-block">
+    <h5><b><%= pending_audit_confirmation.user.full_name %></b></h5>
+    <h6><b>Week Starting:</b> <%= pending_audit_confirmation.start_date %></h6>
+    <h6>Click the check button below to confirm if you did not perform overtime for the week stated above</h6>
+    <div class="row">
+      <div class="pull-right">
+        <div class="col-md-3 col-md-offset-1">
+          <%= link_to ' ', approve_post_path(pending_audit_confirmation), class: "glyphicon glyphicon-ok-sign index-icons", id: "confirm_#{pending_audit_confirmation.id}", data: { confirm: 'Are you sure you want to confirm that you did not perform any overtime?' } %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
