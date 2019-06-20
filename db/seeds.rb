@@ -2,7 +2,7 @@ AdminUser.create(email: "admin@email.com", password: "password", password_confir
 
 puts "1 admin user created"
 
-@user = User.create(email: "email@email.com", password: "password", password_confirmation: "password", first_name: "fname", last_name: "lname", phone: "4322312421")
+@user = Employee.create(email: "email@email.com", password: "password", password_confirmation: "password", first_name: "fname", last_name: "lname", phone: "4322312421")
 
 puts "1 user created"
 
