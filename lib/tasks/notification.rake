@@ -22,6 +22,7 @@ namespace :notification do
       admin_users.each do |admin|
         ManagerMailer.email(admin).deliver_later
       end
+      puts "SENT EMAIL"
     end
   end
 end
