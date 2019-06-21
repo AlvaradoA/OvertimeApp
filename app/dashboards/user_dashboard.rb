@@ -17,6 +17,8 @@ class UserDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
     phone: Field::String.with_options(searchable: false),
+    ssn: Field::Number.with_options(searchable: true),
+    company: Field::String.with_options(searchable: false),
   }.freeze
 
   COLLECTION_ATTRIBUTES = [
@@ -25,6 +27,8 @@ class UserDashboard < Administrate::BaseDashboard
     :email,
     :type,
     :phone,
+    :ssn,
+    :company,
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = [
@@ -42,6 +46,8 @@ class UserDashboard < Administrate::BaseDashboard
     :updated_at,
     :type,
     :phone,
+    :ssn,
+    :company,
   ].freeze
 
   FORM_ATTRIBUTES = [
@@ -50,5 +56,7 @@ class UserDashboard < Administrate::BaseDashboard
     :first_name,
     :last_name,
     :phone,
+    :ssn,
+    :company,
   ].freeze
 end

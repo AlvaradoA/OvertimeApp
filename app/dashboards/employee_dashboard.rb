@@ -17,13 +17,17 @@ class EmployeeDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
     phone: Field::String.with_options(searchable: false),
+    ssn: Field::Number.with_options(searchable: true),
+    company: Field::String.with_options(searchable: false),
   }.freeze
 
   COLLECTION_ATTRIBUTES = [
     :posts,
     :id,
     :email,
-    :phone
+    :phone,
+    :ssn,
+    :company
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = [
@@ -39,7 +43,9 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :created_at,
     :updated_at,
     :type,
-    :phone
+    :phone,
+    :ssn,
+    :company
   ].freeze
 
   FORM_ATTRIBUTES = [
@@ -48,6 +54,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :first_name,
     :last_name,
     :type,
-    :phone
+    :phone,
+    :ssn,
+    :company
   ].freeze
 end
