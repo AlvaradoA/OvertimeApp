@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :posts
   has_many :audit_logs
+  has_many :staffs_associations, class_name: 'Staff'
+  has_many :staffs, through: :staffs_associations
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
